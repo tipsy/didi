@@ -22,7 +22,7 @@ $email_body = "You have received a new message from your website contact form.\n
 $headers = "From: noreply@vegaen.no\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $headers .= "Reply-To: $email_address";	
 
-exec("echo $email_body | mail -s \"$email_subject\" $to");
+exec("echo $email_body | mail -s \"$email_subject\" -a Reply-To:$email_address -a From:noreply@didi.no $to");
 
 // mail($to,$email_subject,$email_body,$headers);
 return true;			
