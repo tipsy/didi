@@ -285,7 +285,7 @@ header {
   color: white;
 }
 header .intro-text {
-  padding-top: 100px;
+  padding-top: 250px;
   padding-bottom: 50px;
 }
 header .intro-text .intro-lead-in {
@@ -588,6 +588,9 @@ section h3.section-subheading {
     max-height: 300px;
     margin: 0 auto;
     border: 7px solid white;
+  }
+  .section-subheading.subheading-margin-reduce {
+    margin: 20px 0 20px 0;
   }
 }
 .team-member {
