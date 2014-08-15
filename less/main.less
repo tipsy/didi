@@ -1,6 +1,14 @@
 @import "variables.less";
 @import "mixins.less";
 
+// Drop shadows
+
+.shadow-one   { .drop-shadow(5); }
+.shadow-two   { .drop-shadow(4); }
+.shadow-three { .drop-shadow(3); }
+.shadow-four  { .drop-shadow(2); }
+.shadow-five  { .drop-shadow(1); }
+
 // Global Components
 
 body {
@@ -81,15 +89,11 @@ h1, h2, h3, h4, h5, h6 {
 // Custom Navigation Bar
 
 .didi-logo img {
-    max-height: 40px;
-}
-
-.navbar-brand {
-    padding: 0;
+    max-height: 20px;
 }
 
 .navbar-default {
-	background-color: @gray-darkest;
+	background-color: @gray-lighter;
 	border-color: transparent;
 	.navbar-brand {
 		color: @brand-primary;
@@ -121,7 +125,7 @@ h1, h2, h3, h4, h5, h6 {
     			.heading-font;
     			font-weight: 400;
     			letter-spacing: 1px;
-    			color: white;
+    			color: @brand-primary;
     			&:hover,
     			&:focus {
     				color: @brand-primary;
@@ -142,7 +146,15 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+@media(max-width:768px){
+    .navbar-default {
+        .drop-shadow(99);
+    }
+}
+
 @media(min-width:768px) {
+    .didi-logo img { max-height: 40px; }
+    .navbar-brand { padding: 0; }
     .navbar-default {
     	background-color: transparent;
         padding: 25px 0;
@@ -161,7 +173,8 @@ h1, h2, h3, h4, h5, h6 {
 		}
     }
     .navbar-default.navbar-shrink {
-    	background-color: @gray-darkest;
+    	background-color: @gray-lighter;
+        .drop-shadow(99);
         padding: 10px 0;
 		.navbar-brand {
 	        font-size: 1.5em;
@@ -186,6 +199,7 @@ header {
 			font-size: 22px;
 			line-height: 22px;
 			margin-bottom: 25px;
+            color: @brand-primary;
 		}
 		.intro-heading {
 			.heading-font;
