@@ -24,3 +24,10 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+$( document ).ready(function() {
+    $('html, body').stop().animate({
+            scrollTop: $("#page-top").offset().top
+        }, 1500, 'easeInOutExpo');
+});
+
