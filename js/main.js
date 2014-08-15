@@ -28,6 +28,6 @@ $('.navbar-collapse ul li a').click(function() {
 $( document ).ready(function() {
     $('html, body').stop().animate({
             scrollTop: $("#page-top").offset().top
-        }, 1500, 'easeInOutExpo');
+        }, 50, 'easeInOutExpo');
 });
 
