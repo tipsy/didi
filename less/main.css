@@ -667,6 +667,14 @@ section#contact :-ms-input-placeholder {
 section#contact .text-danger {
   color: #e74c3c;
 }
+.footer-hack-positive {
+  margin-bottom: 95px;
+}
+.footer-hack-negative {
+  height: 95px;
+  margin-top: -95px;
+  background-color: white;
+}
 footer {
   padding: 25px 0;
   text-align: center;
