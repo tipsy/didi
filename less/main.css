@@ -2,6 +2,9 @@
 .inset-section {
   box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.2);
 }
+.viewport-height {
+  min-height: 100vh;
+}
 .wrapper-shadow {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
   z-index: 10;
@@ -578,6 +581,13 @@ section h3.section-subheading {
   }
   .timeline > li.timeline-inverted > .timeline-panel {
     padding: 0 100px 20px 20px;
+  }
+}
+@media (max-width: 1400px) {
+  .team-member img {
+    max-height: 300px;
+    margin: 0 auto;
+    border: 7px solid white;
   }
 }
 .team-member {
