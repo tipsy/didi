@@ -22,11 +22,6 @@ $email_body = "You have received a new message from your website contact form.\n
 $headers = "From: noreply@vegaen.no\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $headers .= "Reply-To: $email_address";	
 
-// exec("echo \"Vegar er best\" | mail -s \"just a test\" -a Reply-To:reply@vegaen.no -r noreply@didi.no vegar.engen@gmail.com") 
-
-// 
-// exec("echo $email_body | mail -s \"$email_subject\" -a Reply-To:$email_address -a From:noreply@didi.no $to");
-
 return mail($to,$email_subject,$email_body,$headers);
 // return true;			
 ?>
