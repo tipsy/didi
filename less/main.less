@@ -6,7 +6,11 @@
 .inset-section { box-shadow: inset 0px 2px 3px rgba(0,0,0,0.2); }
 .viewport-height { min-height: 100vh; }
 
-.wrapper-shadow { .drop-shadow(10); }
+.wrapper-shadow { 
+    .drop-shadow(10);
+    max-width: 400px;
+    margin: 0 auto;
+}
 
 .btn-shadow { box-shadow: 0px 1px 1px rgba(0,0,0,0.3); }
 
@@ -202,6 +206,7 @@ h1, h2, h3, h4, h5, h6 {
 		}
     }
     .navbar-default.navbar-shrink {
+        .navbar-brand { padding: 5px 0 0 0; }
     	background-color: @gray-lighter;
         .drop-shadow(99);
         padding: 10px 0;
