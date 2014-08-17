@@ -16,10 +16,10 @@ $phone = $_POST['phone'];
 $message = $_POST['message'];
 	
 // Create the email and send the message
-$to = 'didi@vegaen.no'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
-$email_subject = "Website Contact Form:  $name";
-$email_body = "You have received a new message from your website contact form.\n\n"."Here are the details:\n\nName: $name\n\nEmail: $email_address\n\nPhone: $phone\n\nMessage:\n$message";
-$headers = "From: noreply@vegaen.no\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
+$to = 'kontakt@didi.no'; // Add your email address inbetween the '' replacing yourname@yourdomain.com - This is where the form will send a message to.
+$email_subject = "Didi Kontaktskjema:  $name";
+$email_body = "Du har mottatt en melding fra didi kontaktskjema.\n\n"."Detaljene:\n\nNavn: $name\n\nEpost: $email_address\n\nTelefon: $phone\n\nMelding:\n$message";
+$headers = "From: noreply@didi.no\n"; // This is the email address the generated message will be from. We recommend using something like noreply@yourdomain.com.
 $headers .= "Reply-To: $email_address";	
 
 return mail($to,$email_subject,$email_body,$headers);
