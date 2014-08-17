@@ -89,6 +89,9 @@ h6 {
 .bg-darkest-gray {
   background-color: #333333;
 }
+.bg-darkest-gray .text-muted {
+  color: #ecf0f0;
+}
 .btn-primary {
   color: #ffffff;
   background-color: #21a2c7;
