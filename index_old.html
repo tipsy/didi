@@ -31,69 +31,6 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-    
-    <!-- jQuery and Handlebars -->
-    <script src="js/jquery-1.11.0.min.js"></script>
-    <script src="js/handlebars-v1.3.0.min.js"></script>
-    
-    <!-- Portfolio template -->
-    <script id="porfolio-template" type="text/x-handlebars-template">
-      {{#projects}}
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <div class="wrapper-shadow">
-                <a href="#{{modalurl}}" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-eye fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="{{imageurl}}" class="img-responsive" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>{{title}}</h4>
-                    <p class="text-muted">{{subtitle}}</p>
-                </div>
-            </div>
-        </div>
-      {{/projects}}
-    </script>
-    
-    <!-- Portfolio modal template -->
-    <script id="porfolio-modal-template" type="text/x-handlebars-template">
-      {{#portfolioModals}}
-        <div class="portfolio-modal modal fade" id="{{modalurl}}" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-content">
-                    <div class="close-modal" data-dismiss="modal">
-                        <div class="lr">
-                            <div class="rl">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8 col-lg-offset-2">
-                                <div class="modal-body">
-                                    <!-- Project Details Go Here -->
-                                    <h2>Klubbside</h2>
-                                    <p class="item-intro text-muted">Hjemmeside for idrettsklubber</p>
-                                    <img class="img-responsive" src="img/portfolio/klubbside-large.jpg" alt="">
-                                    {{description}}
-                                    <ul class="list-inline">
-                                        <li>Dato: Januar, 2015</li>
-                                        <li>Pilotkunde: <a href="http://shk.no" target="_blank">St. Hallvard Håndballklubb</a></li>
-                                        <li>Kategori: Webutvikling</li>
-                                    </ul>
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">
-                                        <i class="fa fa-times"></i> Lukk
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-      {{/portfolioModals}}
-    </script>
 
 </head>
 
@@ -193,8 +130,54 @@
                 </div>
             </div>
             <div class="row">
-                <div id="portfolio-template"></div>
-                <!-- Portfolio items -->
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <div class="wrapper-shadow">
+                        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-eye fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/klubbside.png" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Klubbside</h4>
+                            <p class="text-muted">Hjemmesider for idrettsklubber</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <div class="wrapper-shadow">
+                        <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-eye fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/bf4stats.jpg" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>BF4 Stats</h4>
+                            <p class="text-muted">Ikondesign for app</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6 portfolio-item">
+                    <div class="wrapper-shadow">
+                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-eye fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/klubbside.png" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Klubbside</h4>
+                            <p class="text-muted">Hjemmesider for idrettsklubber</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -211,7 +194,36 @@
                 </div>
             </div>
             <div class="row">
-                <!-- Team members -->
+                <div class="col-sm-6">
+                    <div class="team-member">
+                        <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
+                        <h4 class="team-heading">David Åse</h4>
+                        <p class="text-muted">Designer og frontendutvikler. <br> Siv.ing. datateknologi ved NTNU</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="mailto:david@didi.no"><i class="fa fa-envelope"></i></a>
+                            </li>
+                            <li><a href="http://no.linkedin.com/in/davidaase/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/davidaase" target="_blank"><i class="fa fa-facebook"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="team-member">
+                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
+                        <h4 class="team-heading">Vegar Engen</h4>
+                        <p class="text-muted">Backendutvikler og driftsansvarlig. <br> Siv.ing. datateknologi ved NTNU</p>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="mailto:vegar@didi.no"><i class="fa fa-envelope"></i></a>
+                            </li>
+                            <li><a href="http://no.linkedin.com/in/vegarengen/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/vegarengen" target="_blank"><i class="fa fa-facebook"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -284,8 +296,111 @@
     </footer>
 
     <!-- Portfolio Modals -->
-    
-    <div id="portfolio-modals"></div>
+    <!-- Use the modals below to showcase details about your portfolio projects! -->
+
+    <!-- Portfolio Modal 1 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Klubbside</h2>
+                            <p class="item-intro text-muted">Hjemmeside for idrettsklubber</p>
+                            <img class="img-responsive" src="img/portfolio/klubbside-large.jpg" alt="">
+                            <p>Klubbside er en komplett hjemmesideløsning for små og store idrettsklubber. <br> Med vår brukervennlige admininistratorløsning går det fort å legge til nye spillere og kamper, eller sende SMS til hele laget. Siden har et responsivt design, noe som gjør at den ser like bra ut på mobiltelefoner, tablets og PCer. Besøk <a href="http://klubbside.no" target="_blank">klubbside.no</a> for å lære mer om Klubbside</p>
+                            <ul class="list-inline">
+                                <li>Dato: Januar, 2015</li>
+                                <li>Pilotkunde: <a href="http://shk.no" target="_blank">St. Hallvard Håndballklubb</a></li>
+                                <li>Kategori: Webutvikling</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                <i class="fa fa-times"></i> Lukk
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 2 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>BF4 Stats Ikon</h2>
+                            <p class="item-intro text-muted">Ikondesign for appen "BF4 Stats"</p>
+                            <img class="img-responsive" src="img/portfolio/bf4stats-large.jpg" alt="">
+                            <p>Utvikleren <a href="https://play.google.com/store/apps/developer?id=Bjorn%20CS&hl=en" target="_blank">Bjorn CS</a> trengte et appikon. De ønsket at ikonet skulle følge designprinsippene til Battlefield serien, men siden appen har flere hundre tusen nedlastinger var det viktig å ikke trå over copyrightgrensen. Designet er vektorbasert, og vi laget en egen font som er svært lik den offisielle. 
+                                <br>Appen kan lastes ned fra <a href="https://play.google.com/store/apps/details?id=com.bcseime.bf4stats&hl=en" target="_blank">Google Play</a></p>
+                            <ul class="list-inline">
+                                <li>Dato: Januar, 2014</li>
+                                <li>Kunde: <a href="https://play.google.com/store/apps/developer?id=Bjorn%20CS&hl=en" target="_blank">Bjorn CS</a></li>
+                                <li>Kategori: Grafisk design</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                <i class="fa fa-times"></i> Lukk
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Modal 3 -->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-content">
+            <div class="close-modal" data-dismiss="modal">
+                <div class="lr">
+                    <div class="rl">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2">
+                        <div class="modal-body">
+                            <!-- Project Details Go Here -->
+                            <h2>Klubbside</h2>
+                            <p class="item-intro text-muted">Hjemmeside for idrettsklubber</p>
+                            <img class="img-responsive" src="img/portfolio/klubbside-large.jpg" alt="">
+                            <p>Klubbside er en komplett hjemmesideløsning for små og store idrettsklubber. <br> Med vår brukervennlige admininistratorløsning går det fort å legge til nye spillere og kamper, eller sende SMS til hele laget. Siden har et responsivt design, noe som gjør at den ser like bra ut på mobiltelefoner, tablets og PCer. Besøk <a href="http://klubbside.no" target="_blank">klubbside.no</a> for å lære mer om Klubbside</p>
+                            <ul class="list-inline">
+                                <li>Dato: Januar, 2015</li>
+                                <li>Pilotkunde: <a href="http://shk.no" target="_blank">St. Hallvard Håndballklubb</a></li>
+                                <li>Kategori: Webutvikling</li>
+                            </ul>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                <i class="fa fa-times"></i> Lukk
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.min.js"></script>
+    <script src="js/handlebars-v1.3.0.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -301,10 +416,6 @@
 
     <!-- Custom JavaScript -->
     <script src="js/main.min.js"></script>
-    
-    <!-- Handlebars data -->
-    
-    <script src=templates/projects.js></script>
 
 </body>
 
