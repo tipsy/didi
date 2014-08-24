@@ -35,65 +35,6 @@
     <!-- jQuery and Handlebars -->
     <script src="js/jquery-1.11.0.min.js"></script>
     <script src="js/handlebars-v1.3.0.min.js"></script>
-    
-    <!-- Portfolio template -->
-    <script id="porfolio-template" type="text/x-handlebars-template">
-      {{#projects}}
-          <div class="col-md-4 col-sm-6 portfolio-item">
-            <div class="wrapper-shadow">
-                <a href="#{{modalurl}}" class="portfolio-link" data-toggle="modal">
-                    <div class="portfolio-hover">
-                        <div class="portfolio-hover-content">
-                            <i class="fa fa-eye fa-3x"></i>
-                        </div>
-                    </div>
-                    <img src="{{imageurl}}" class="img-responsive" alt="">
-                </a>
-                <div class="portfolio-caption">
-                    <h4>{{title}}</h4>
-                    <p class="text-muted">{{subtitle}}</p>
-                </div>
-            </div>
-        </div>
-      {{/projects}}
-    </script>
-    
-    <!-- Portfolio modal template -->
-    <script id="porfolio-modal-template" type="text/x-handlebars-template">
-      {{#portfolioModals}}
-        <div class="portfolio-modal modal fade" id="{{modalurl}}" tabindex="-1" role="dialog" aria-hidden="true">
-                <div class="modal-content">
-                    <div class="close-modal" data-dismiss="modal">
-                        <div class="lr">
-                            <div class="rl">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-8 col-lg-offset-2">
-                                <div class="modal-body">
-                                    <!-- Project Details Go Here -->
-                                    <h2>Klubbside</h2>
-                                    <p class="item-intro text-muted">Hjemmeside for idrettsklubber</p>
-                                    <img class="img-responsive" src="img/portfolio/klubbside-large.jpg" alt="">
-                                    {{description}}
-                                    <ul class="list-inline">
-                                        <li>Dato: Januar, 2015</li>
-                                        <li>Pilotkunde: <a href="http://shk.no" target="_blank">St. Hallvard Håndballklubb</a></li>
-                                        <li>Kategori: Webutvikling</li>
-                                    </ul>
-                                    <button type="button" class="btn btn-primary" data-dismiss="modal">
-                                        <i class="fa fa-times"></i> Lukk
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-      {{/portfolioModals}}
-    </script>
 
 </head>
 
@@ -102,7 +43,6 @@
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Vis navigasjon</span>
@@ -116,26 +56,14 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Tjenester</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#portfolio">Prosjekter</a>
-                    </li>
-                                       <li>
-                        <a class="page-scroll" href="#team">Team</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Kontakt</a>
-                    </li>
+                    <li class="hidden"><a href="#page-top"></a></li>
+                    <li><a class="page-scroll" href="#services">Tjenester</a></li>
+                    <li><a class="page-scroll" href="#portfolio">Prosjekter</a></li>
+                    <li><a class="page-scroll" href="#team">Team</a></li>
+                    <li><a class="page-scroll" href="#contact">Kontakt</a></li>
                 </ul>
             </div>
-            <!-- /.navbar-collapse -->
         </div>
-        <!-- /.container-fluid -->
     </nav>
 
     <!-- Header -->
@@ -158,32 +86,23 @@
                 </div>
             </div>
             <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x inset-circle">
-                        <i class="fa fa-laptop fa-stack-1x brand-blue"></i>
-                    </span>
-                    <h4 class="service-heading">Webutvikling</h4>
-                    <p class="text-muted">Vi leverer komplette websider med brukervennlige administratorgrensesnitt</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x inset-circle">
-                        <i class="fa fa-picture-o fa-stack-1x brand-blue"></i>
-                    </span>
-                    <h4 class="service-heading">Grafisk design</h4>
-                    <p class="text-muted">Vi hjelper med webdesign og logo hvis du vil modernisere din nettside</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x inset-circle">
-                        <i class="fa fa-search fa-stack-1x brand-blue"></i>
-                    </span>
-                    <h4 class="service-heading">Webanalyse</h4>
-                    <p class="text-muted">Vi utfører trafikkanalyse og søkemotoroptimalisering på din nettside</p>
-                </div>
+                <script id="service-template" type="text/x-handlebars-template">
+                  {{#services}}
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x inset-circle">
+                            <i class="fa fa-stack-1x brand-blue {{icon}}"></i>
+                        </span>
+                        <h4 class="service-heading">{{title}}</h4>
+                        <p class="text-muted">{{subtitle}}</p>
+                   </div>
+                  {{/services}}
+                </script>
+                <div id="service-template-output"></div>
             </div>
         </div>
     </section>
 
-    <!-- Portfolio Grid Section -->
+    <!-- Portfolio Section -->
     <section id="portfolio" class="bg-light-gray inset-section viewport-height">
         <div class="container">
             <div class="row">
@@ -193,13 +112,30 @@
                 </div>
             </div>
             <div class="row">
-                <div id="portfolio-template"></div>
-                <!-- Portfolio items -->
+                <script id="porfolio-template" type="text/x-handlebars-template">
+                  {{#projects}}
+                      <div class="col-md-4 col-sm-6 portfolio-item">
+                        <div class="wrapper-shadow">
+                            <a href="#{{modalurl}}" class="portfolio-link" data-toggle="modal">
+                                <div class="portfolio-hover">
+                                    <div class="portfolio-hover-content">
+                                        <i class="fa fa-eye fa-3x"></i>
+                                    </div>
+                                </div>
+                                <img src="{{imageurl}}" class="img-responsive" alt="">
+                            </a>
+                            <div class="portfolio-caption">
+                                <h4>{{title}}</h4>
+                                <p class="text-muted">{{subtitle}}</p>
+                            </div>
+                        </div>
+                    </div>
+                  {{/projects}}
+                </script>
+                <div id="portfolio-template-output"></div>
             </div>
         </div>
     </section>
-
-    <!-- About Section -->
 
     <!-- Team Section -->
     <section id="team" class="bg-brand inset-section viewport-height">
@@ -211,7 +147,26 @@
                 </div>
             </div>
             <div class="row">
-                <!-- Team members -->
+                <script id="team-template" type="text/x-handlebars-template">
+                  {{#team}}
+                    <div class="col-sm-6">
+                        <div class="team-member">
+                            <img src="{{imageurl}}" class="img-responsive img-circle" alt="">
+                            <h4 class="team-heading">{{name}}</h4>
+                            <p class="text-muted">{{{about}}}</p>
+                            <ul class="list-inline social-buttons">
+                                <li><a href="mailto:{{mailto}}"><i class="fa fa-envelope"></i></a>
+                                </li>
+                                <li><a href="{{linkedin}}" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                                <li><a href="{{facebook}}" target="_blank"><i class="fa fa-facebook"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                  {{/team}}
+                </script>
+                <div id="team-template-output"></div>
             </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -221,7 +176,7 @@
         </div>
     </section>
 
-
+    <!-- Contact section -->
     <section id="contact" class="inset-section viewport-height bg-darkest-gray">
         <div class="container">
             <div class="row">
@@ -271,21 +226,47 @@
             <div class="row">
                 <div class="col-md-12">
                     <ul class="list-inline social-buttons">
-                        <li><a href="https://www.facebook.com/didialog" target="_blank"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="https://www.linkedin.com/company/didi" target="_blank"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                        <li><a href="https://twitter.com/didialog" target="_blank"><i class="fa fa-twitter"></i></a>
-                        </li>
+                        <li><a href="https://www.facebook.com/didialog" target="_blank"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="https://www.linkedin.com/company/didi" target="_blank"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="https://twitter.com/didialog" target="_blank"><i class="fa fa-twitter"></i></a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- Portfolio Modals -->
-    
-    <div id="portfolio-modals"></div>
+    <script id="porfolio-modal-template" type="text/x-handlebars-template">
+      {{#portfolioModals}}
+        <div class="portfolio-modal modal fade" id="{{modalurl}}" tabindex="-1" role="dialog" aria-hidden="true">
+                <div class="modal-content">
+                    <div class="close-modal" data-dismiss="modal">
+                        <div class="lr"><div class="rl"></div></div> <!-- cross -->
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-8 col-lg-offset-2">
+                                <div class="modal-body">
+                                    <h2>{{title}}</h2>
+                                    <p class="item-intro text-muted">{{subtitle}}</p>
+                                    <img class="img-responsive" src="{{imageurl}}" alt="">
+                                    {{{description}}}
+                                    <ul class="list-inline">
+                                        <li>{{date}}</li>
+                                        <li>{{{customer}}}</a></li>
+                                        <li>{{category}}</li>
+                                    </ul>
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">
+                                        <i class="fa fa-times"></i> Lukk
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+      {{/portfolioModals}}
+    </script>
+    <div id="portfolio-modal-template-output"></div>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -303,9 +284,10 @@
     <script src="js/main.min.js"></script>
     
     <!-- Handlebars data -->
-    
-    <script src=templates/projects.js></script>
+    <script src=data/services.min.js></script>
+    <script src=data/projects.min.js></script>
+    <script src=data/team.min.js></script>
+
 
 </body>
-
 </html>
