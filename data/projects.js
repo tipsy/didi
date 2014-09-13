@@ -4,9 +4,9 @@ var portfolioTemplate = Handlebars.compile( $("#porfolio-template").html() );
 var projectData = { projects: [
     
   {
-      title:    'Flora & Fauna', 
-      subtitle: 'Brukergenerert oppslagsverk', 
-      imageurl: 'img/portfolio/bf4stats.jpg', 
+      title:    'TwistRating', 
+      subtitle: 'Hvilken twist er best?', 
+      imageurl: 'img/portfolio/twistrating.jpg', 
       modalurl: 'portModOne' 
   },
     
@@ -34,14 +34,14 @@ var portfolioModalTemplate = Handlebars.compile( $("#porfolio-modal-template").h
 var modalData = { portfolioModals: [
     
   {
-      title:        'Flora & Fauna', 
-      subtitle:     'Brukergenerert oppslagsverk', 
-      imageurl:     'img/portfolio/bf4stats-large.jpg', 
+      title:        'TwistRating', 
+      subtitle:     'Hvilken twist er best?', 
+      imageurl:     'img/portfolio/twistrating-large.jpg', 
       modalurl:     'portModOne',
-      description:  'Mer info kommer snart',
-      date:         'Dato: August 2015', 
+      description:  'TwistRating lar brukere rangere Twist-sjokolader, og dele rangeringene sine på Facebook. TwistRating kan sees på <a href="http://twistrating.no" target="_blank">twistrating.no</a>',
+      date:         'Dato: September 2014', 
       customer:     'Kunde: Oss selv',
-      category:     'Kategori: Webutvikling'
+      category:     'Kategori: Webutvikling, Fotografi, Grafisk Design'
   },
     
   {
