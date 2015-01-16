@@ -7,7 +7,7 @@ var teamData = { team: [
       name:     'David Åse', 
       about:    'Designer og frontendutvikler. <br> Siv.ing. datateknologi ved NTNU',
       imageurl: 'img/team/1.jpg',
-      linkedin: 'http://no.linkedin.com/in/davidaase/',
+      linkedin: 'https://no.linkedin.com/in/davidaase/',
       facebook: 'https://www.facebook.com/davidaase',
       mailto:   'david@didi.no'
   },
@@ -16,9 +16,18 @@ var teamData = { team: [
       name:     'Vegar Engen', 
       about:    'Backendutvikler og driftsansvarlig. <br> Siv.ing. datateknologi ved NTNU',
       imageurl: 'img/team/2.jpg',
-      linkedin: 'http://no.linkedin.com/in/vegarengen/',
+      linkedin: 'https://no.linkedin.com/in/vegarengen/',
       facebook: 'https://www.facebook.com/vegarengen',
       mailto:   'vegar@didi.no'
+  }, 
+    
+  {
+      name:     'Simen Fivelstad Smaaberg', 
+      about:    'Backend- og frontendutvikler <br> Siv.ing. datateknologi ved NTNU',
+      imageurl: 'img/team/3.jpg',
+      linkedin: 'https://no.linkedin.com/in/simensma',
+      facebook: 'https://www.facebook.com/simensma',
+      mailto:   'simen@didi.no'
   }
     
 ]};
