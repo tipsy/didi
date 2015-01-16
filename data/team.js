@@ -5,7 +5,7 @@ var teamData = { team: [
     
   {
       name:     'David Åse', 
-      about:    'Designer og frontendutvikler. <br> Siv.ing. datateknologi ved NTNU',
+      about:    'Designer og frontendutvikler <br> Siv.ing. datateknologi ved NTNU',
       imageurl: 'img/team/1.jpg',
       linkedin: 'https://no.linkedin.com/in/davidaase/',
       facebook: 'https://www.facebook.com/davidaase',
@@ -14,7 +14,7 @@ var teamData = { team: [
     
   {
       name:     'Vegar Engen', 
-      about:    'Backendutvikler og driftsansvarlig. <br> Siv.ing. datateknologi ved NTNU',
+      about:    'Backendutvikler og driftsansvarlig <br> Siv.ing. datateknologi ved NTNU',
       imageurl: 'img/team/2.jpg',
       linkedin: 'https://no.linkedin.com/in/vegarengen/',
       facebook: 'https://www.facebook.com/vegarengen',
