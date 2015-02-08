@@ -119,6 +119,7 @@ h1, h2, h3, h4, h5, h6 {
 	border-radius: 3px;
 	font-size: 18px;
 	padding: 20px 40px;
+    text-shadow: @text-shadow-black;
 }
 
 // Custom Navigation Bar
@@ -161,6 +162,7 @@ h1, h2, h3, h4, h5, h6 {
     			font-weight: 400;
     			letter-spacing: 1px;
     			color: @brand-primary;
+                text-shadow: @text-shadow-white;
     			&:hover,
     			&:focus {
     				color: darken(@brand-primary, 10%);
@@ -174,11 +176,13 @@ h1, h2, h3, h4, h5, h6 {
 		color: white;
 		background-color: @brand-primary;
         box-shadow: inset 0px 2px 2px rgba(0,0,0,0.2);
+        text-shadow: @text-shadow-black;
+
 	}
 	.navbar-nav>.active>a:hover,
 	.navbar-nav>.active>a:focus {
 		color: white;
-		background-color: darken(@brand-primary, 10%);
+		background-color: @brand-primary;
 	}
 }
 
@@ -236,8 +240,8 @@ header {
 			font-size: 25px;
 			line-height: 25px;
 			margin-bottom: 25px;
-            color: rgba(33,162,199, 0.7);
-            text-shadow: 0px 4px 6px #def, 0 0 0 #000, 0px 4px 6px #def;
+            color: rgba(33,162,199, 0.9);
+            text-shadow: 0px 2px 6px #def, -1px -1px 0 rgba(0,0,0,0.9);
 		}
 		.intro-heading {
 			.heading-font;
@@ -290,6 +294,10 @@ section {
 		margin-bottom: 75px;
     }
 }
+#services  { text-shadow: @text-shadow-black; }
+#portfolio { text-shadow: @text-shadow-white; }
+#team      { text-shadow: @text-shadow-black; }
+#contact   { text-shadow: @text-shadow-black; }
 
 @media(min-width:768px) {
 	section {
@@ -299,6 +307,8 @@ section {
 
 // Services Section
 
+#services { text-shadow: @text-shadow-black; }
+
 .service-heading {
 	margin: 15px 0;
 	text-transform: none;
@@ -307,6 +317,7 @@ section {
 // Portfolio Section
 
 #portfolio {
+    text-shadow: @text-shadow-white;
     .portfolio-item {
         margin: 0 0 15px;
         right: 0;
