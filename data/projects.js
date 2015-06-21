@@ -60,7 +60,7 @@ var modalData = { portfolioModals: [
       subtitle:     'Ikondesign for app', 
       imageurl:     'img/portfolio/bf4stats-large.jpg', 
       modalurl:     'portModThree',
-      description:  '<p>Utvikleren <a href="https://play.google.com/store/apps/developer?id=Bjorn%20CS&hl=en" target="_blank">Bjorn CS</a> trengte et appikon. De ønsket at ikonet skulle følge designprinsippene til Battlefield serien, men siden appen har flere hundre tusen nedlastinger var det viktig å ikke trå over copyrightgrensen. Designet er vektorbasert, og vi laget en egen font som er svært lik den offisielle. <br>Appen kan lastes ned fra <a href="https://play.google.com/store/apps/details?id=com.bcseime.bf4stats&hl=en" target="_blank">Google Play</a></p>',
+      description:  '<p>Utvikleren <a href="https://play.google.com/store/apps/developer?id=Bjorn%20CS&hl=en" target="_blank">Bjorn CS</a> trengte et appikon. De ønsket at ikonet skulle følge designprinsippene til Battlefield serien, men siden appen har flere hundre tusen nedlastinger var det viktig å ikke trå over copyrightgrensen. Designet er vektorbasert, og vi laget en egen font som er svært lik den offisielle. <br>Appen kan lastes ned fra <a href="https://play.google.com/store/apps/details?id=com.bcseime.bf4stats2" target="_blank">Google Play</a></p>',
       date:         'Dato: Januar 2014', 
       customer:     'Kunde: <a href="https://play.google.com/store/apps/developer?id=Bjorn%20CS&hl=en" target="_blank">Bjorn CS</a>',
       category:     'Kategori: Grafisk design'
